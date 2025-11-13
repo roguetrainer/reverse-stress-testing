@@ -25,7 +25,7 @@ For US copper wire imports, RST reveals:
 
 These insights would be nearly impossible to discover through traditional scenario planning.
 
-🛠️ What I Built:
+🛠️ What We Built:
 
 A complete, production-ready implementation featuring:
 • Multi-layer supply chain network modeling
@@ -83,7 +83,7 @@ Perfect for risk managers, supply chain professionals, researchers, and anyone i
 📖 Paper Reference:
 Smith et al. (2025), "Reverse Stress Testing for Supply Chain Resilience", arXiv:2511.07289
 
-🔗 Implementation:
+🔗 Implementation: https://github.com/roguetrainer/reverse-stress-testing
 Open source, fully documented, ready to deploy
 
 ---
