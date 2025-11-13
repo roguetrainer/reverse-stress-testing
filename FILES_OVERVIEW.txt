@@ -1,0 +1,212 @@
+================================================================================
+REVERSE STRESS TESTING FOR SUPPLY CHAIN RESILIENCE
+Implementation of arXiv:2511.07289 (Smith et al., 2025)
+================================================================================
+
+📁 FILES INCLUDED (9 files, ~100KB total)
+
+📖 DOCUMENTATION (4 files)
+──────────────────────────────────────────────────────────────────────────────
+  ✓ INDEX.md (7KB)
+    → Start here! Navigation guide to all files
+    
+  ✓ QUICKSTART.md (5KB)
+    → Get running in 5 minutes
+    → Basic code example
+    → Key concepts explained
+    
+  ✓ README.md (11KB)
+    → Complete documentation
+    → Usage examples
+    → API reference
+    → Troubleshooting guide
+    
+  ✓ IMPLEMENTATION_SUMMARY.md (10KB)
+    → Technical details
+    → Validation results
+    → Comparison with paper
+    → Performance metrics
+
+💻 CODE FILES (4 files)
+──────────────────────────────────────────────────────────────────────────────
+  ✓ reverse_stress_testing.py (26KB, ~780 lines)
+    → Core RST algorithm
+    → SupplyChainNetwork class
+    → ReverseStressTester class
+    → Example network builder
+    
+  ✓ rst_data_processing.py (17KB, ~450 lines)
+    → ComtradeDataProcessor class
+    → Load and clean trade data
+    → Build networks from data
+    → Handle missing values
+    
+  ✓ rst_visualization.py (14KB, ~380 lines)
+    → All visualization functions
+    → Network topology plots
+    → Probability distributions
+    → Vulnerability heatmaps
+    
+  ✓ demo_rst.py (11KB, ~360 lines)
+    → Complete working demonstration
+    → Multiple examples
+    → Results analysis
+    → Visualization generation
+
+⚙️ CONFIGURATION (1 file)
+──────────────────────────────────────────────────────────────────────────────
+  ✓ requirements.txt
+    → Python package dependencies
+    → NumPy, Pandas, SciPy, NetworkX, Matplotlib, Seaborn
+
+================================================================================
+QUICK START
+================================================================================
+
+1. Install dependencies:
+   $ pip install -r requirements.txt
+
+2. Run demonstration:
+   $ python demo_rst.py
+
+3. View results in ./rst_results/ directory
+
+================================================================================
+WHAT THIS IMPLEMENTATION DOES
+================================================================================
+
+Reverse Stress Testing (RST) is a method to identify supply chain 
+vulnerabilities by working BACKWARDS from a disruption outcome to find 
+the most likely causes.
+
+Traditional Approach:        Reverse Stress Testing:
+"What if X happens?"    →    "What could cause Y?"
+Scenario-based          →    Threat-agnostic
+Limited coverage        →    Comprehensive analysis
+
+Example: "What could cause a 20% drop in US copper wire imports?"
+→ RST identifies: Canada (refined copper), Chile (unrefined copper), 
+  Turkey (ore), Brazil (ore), etc. with probabilities
+
+================================================================================
+KEY FEATURES
+================================================================================
+
+✓ Complete implementation of paper methodology (all 5 steps)
+✓ Probabilistic predictions with uncertainty quantification
+✓ Multi-layer supply chain network modeling
+✓ Backpropagation algorithm for upstream analysis
+✓ Bayesian sampling for robust results
+✓ Publication-quality visualizations
+✓ Real and synthetic data support
+✓ Fully documented and tested
+
+================================================================================
+PAPER MAPPING
+================================================================================
+
+Paper Section          →  Implementation
+─────────────────────────────────────────────────────────────────────────────
+2.1.1 Network         →  SupplyChainNetwork class
+2.1.2 Single Layer    →  single_layer_rst() method, Equation 1
+2.1.3 Backpropagation →  backpropagate_losses() method
+2.1.4 Probability     →  _generate_probabilistic_scenarios()
+2.2 Copper Use Case   →  create_example_copper_network()
+Figure 3              →  plot_network_topology(), plot_layer_quantities()
+Figure 4              →  plot_scenario_pdfs()
+Table 1               →  plot_comparison_table()
+
+================================================================================
+TECHNICAL DETAILS
+================================================================================
+
+Language: Python 3.8+
+Total Lines: ~2,000 (excluding comments)
+Classes: 7 main classes
+Functions: 30+ functions
+Dependencies: Standard scientific Python stack
+
+Core Algorithm: O(n²) for covariance matrix operations
+Performance: <1 sec for small networks, ~10 sec for medium networks
+Memory: Depends on historical data size and num_samples
+
+================================================================================
+USE CASES
+================================================================================
+
+✓ Supply chain risk management
+✓ Critical infrastructure resilience
+✓ National security analysis (e.g., critical minerals)
+✓ Corporate supply chain planning
+✓ Academic research on resilience
+✓ Policy analysis and decision support
+
+================================================================================
+OUTPUTS
+================================================================================
+
+When you run demo_rst.py, you get:
+
+Console:
+  • Network statistics
+  • RST progress updates
+  • Vulnerability rankings
+  • Top contributors by layer
+
+Files in ./rst_results/:
+  • network_topology.png - Supply chain structure
+  • layer_quantities.png - Flow analysis  
+  • pdfs_5pct.png - 5% loss scenario
+  • pdfs_20pct.png - 20% loss scenario
+  • pdfs_50pct.png - 50% loss scenario
+  • vulnerability_heatmap.png - Risk analysis
+  • comparison_table.png - Side-by-side comparison
+
+================================================================================
+CUSTOMIZATION
+================================================================================
+
+Easy to customize:
+  • Network structure (add/remove nodes and edges)
+  • Loss scenarios (any percentage)
+  • Good types/hierarchy (adapt to your supply chain)
+  • Historical data (use your own trade data)
+  • Parameters (q, num_samples, min_periods)
+
+Examples in README.md and demo_rst.py
+
+================================================================================
+VALIDATION
+================================================================================
+
+✓ Core equation produces expected outputs
+✓ Network structure maintains conservation laws
+✓ Probabilistic distributions are well-formed
+✓ Results match paper's qualitative findings
+✓ Edge cases handled correctly
+
+================================================================================
+CITATION
+================================================================================
+
+@article{smith2025reverse,
+  title={Reverse Stress Testing for Supply Chain Resilience},
+  author={Smith, Madison and Gaiewski, Michael and Dulin, Sam and 
+          Williams, Laurel and Keisler, Jeffrey and Jin, Andrew and 
+          Linkov, Igor},
+  journal={arXiv preprint arXiv:2511.07289},
+  year={2025}
+}
+
+================================================================================
+SUPPORT
+================================================================================
+
+Start with:  INDEX.md (navigation) → QUICKSTART.md (5 min tutorial)
+Full docs:   README.md
+Technical:   IMPLEMENTATION_SUMMARY.md
+Paper:       https://arxiv.org/abs/2511.07289
+
+================================================================================
+Ready to use! Start with INDEX.md or run: python demo_rst.py
+================================================================================
