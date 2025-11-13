@@ -2,7 +2,7 @@
 
 Python implementation of the methodology from [**"Reverse Stress Testing for Supply Chain Resilience"** (arXiv:2511.07289) by Smith et al., 2025](https://www.alphaxiv.org/overview/2511.07289v1).
 
-![RST](Reverse-stress-test.png)
+![RST](./img/Reverse-stress-test.png)
 
 ## Overview
 
