@@ -2,6 +2,8 @@
 
 Python implementation of the methodology from **"Reverse Stress Testing for Supply Chain Resilience"** (arXiv:2511.07289) by Smith et al., 2025.
 
+![RST](Reverse-stress-test.png)
+
 ## Overview
 
 This implementation provides a complete framework for **reverse stress testing (RST)** of supply chains. Unlike traditional forward stress testing that starts with a threat scenario and measures its impact, RST works backwards from a specified disruption level to identify the most likely causes.
