@@ -1,0 +1,27 @@
+name: rst-minimal
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.9
+  
+  # Core requirements only
+  - numpy>=1.20.0
+  - pandas>=1.3.0
+  - scipy>=1.7.0
+  - networkx>=2.6.0
+  - matplotlib>=3.4.0
+  - seaborn>=0.11.0
+  
+  - pip>=21.0
+
+# Minimal installation for basic RST functionality
+# File size: ~500MB
+# Installation time: ~5 minutes
+#
+# Usage:
+#   conda env create -f environment-minimal.yaml
+#   conda activate rst-minimal
+#   python demo_rst.py

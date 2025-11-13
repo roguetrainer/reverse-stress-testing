@@ -1,0 +1,133 @@
+name: rst-ml-gpu
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.9
+  
+  # ============================================================================
+  # Core RST Dependencies
+  # ============================================================================
+  - numpy>=1.20.0
+  - pandas>=1.3.0
+  - scipy>=1.7.0
+  - networkx>=2.6.0
+  - matplotlib>=3.4.0
+  - seaborn>=0.11.0
+  
+  # ============================================================================
+  # Deep Learning Frameworks (GPU-enabled)
+  # ============================================================================
+  
+  # PyTorch with CUDA support
+  - pytorch>=2.0.0
+  - torchvision>=0.15.0
+  - torchaudio>=2.0.0
+  - pytorch-cuda=11.8  # Adjust version based on your CUDA installation
+  
+  # OR for CPU-only (comment out above and uncomment below):
+  # - pytorch>=2.0.0
+  # - torchvision>=0.15.0
+  # - torchaudio>=2.0.0
+  # - cpuonly
+  
+  # PyTorch Geometric (for GNNs)
+  - pyg>=2.3.0
+  
+  # ============================================================================
+  # Machine Learning Libraries
+  # ============================================================================
+  - scikit-learn>=1.0.0
+  - xgboost>=1.6.0
+  - lightgbm>=3.3.0
+  
+  # ============================================================================
+  # Probabilistic Programming & Bayesian Methods
+  # ============================================================================
+  - pymc>=5.0.0
+  
+  # ============================================================================
+  # Reinforcement Learning
+  # ============================================================================
+  - gymnasium>=0.28.0  # OpenAI Gym successor
+  
+  # ============================================================================
+  # Causal Inference
+  # ============================================================================
+  - dowhy>=0.8.0
+  
+  # ============================================================================
+  # Interactive Computing
+  # ============================================================================
+  - jupyter>=1.0.0
+  - jupyterlab>=3.0.0
+  - ipykernel>=6.0.0
+  - ipywidgets>=7.6.0
+  
+  # ============================================================================
+  # Visualization
+  # ============================================================================
+  - plotly>=5.0.0
+  - tensorboard>=2.12.0
+  
+  # ============================================================================
+  # Utilities
+  # ============================================================================
+  - tqdm>=4.60.0
+  - pyyaml>=5.4.0
+  
+  # ============================================================================
+  # pip packages
+  # ============================================================================
+  - pip>=21.0
+  - pip:
+    # PyTorch Lightning
+    - pytorch-lightning>=2.0.0
+    
+    # Additional ML libraries
+    - optuna>=3.0.0                    # Hyperparameter optimization
+    - ray[tune]>=2.0.0                 # Distributed hyperparameter tuning
+    
+    # Causal discovery
+    - causal-learn>=0.1.0
+    
+    # Bayesian optimization
+    - ax-platform>=0.3.0
+    
+    # Advanced RL
+    - stable-baselines3>=2.0.0
+    
+    # Interpretability
+    - shap>=0.41.0
+    - lime>=0.2.0
+
+# ============================================================================
+# GPU Environment for Machine Learning Research
+# ============================================================================
+#
+# This environment includes PyTorch and related ML libraries for:
+# - Deep learning covariance prediction (Section 2.1 of FUTURE_RESEARCH.md)
+# - Reinforcement learning scenario generation (Section 2.2)
+# - Bayesian neural networks (Section 2.3)
+# - Causal discovery (Section 2.4)
+#
+# CUDA Requirements:
+# - NVIDIA GPU with CUDA Compute Capability 3.5 or higher
+# - CUDA Toolkit 11.8 (or adjust pytorch-cuda version above)
+# - cuDNN 8.x
+#
+# Installation:
+#   conda env create -f environment-ml-gpu.yaml
+#   conda activate rst-ml-gpu
+#
+# Verify GPU:
+#   python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}'); print(f'GPU count: {torch.cuda.device_count()}')"
+#
+# For CPU-only version:
+#   Comment out pytorch-cuda line and uncomment cpuonly line above
+#
+# Approximate size: ~8GB download, ~15GB installed
+# Installation time: ~20-30 minutes

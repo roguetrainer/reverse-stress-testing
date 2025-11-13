@@ -1,0 +1,168 @@
+name: rst-supply-chain
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ============================================================================
+  # Core Dependencies (Required)
+  # ============================================================================
+  
+  # Python interpreter
+  - python=3.9.*
+  
+  # Numerical computing
+  - numpy>=1.20.0,<2.0.0
+  - scipy>=1.7.0,<2.0.0
+  - pandas>=1.3.0,<3.0.0
+  
+  # Network analysis
+  - networkx>=2.6.0,<4.0.0
+  
+  # Visualization
+  - matplotlib>=3.4.0,<4.0.0
+  - seaborn>=0.11.0,<1.0.0
+  
+  # ============================================================================
+  # Interactive Computing (Recommended)
+  # ============================================================================
+  
+  # Jupyter ecosystem
+  - jupyter>=1.0.0
+  - jupyterlab>=3.0.0
+  - notebook>=6.4.0
+  - ipykernel>=6.0.0
+  - ipywidgets>=7.6.0
+  - widgetsnbextension>=3.5.0
+  
+  # ============================================================================
+  # Development Tools (Optional but recommended)
+  # ============================================================================
+  
+  # Code formatting and linting
+  - black>=21.0
+  - flake8>=3.9.0
+  - pylint>=2.8.0
+  - isort>=5.8.0
+  - mypy>=0.900
+  
+  # Testing
+  - pytest>=6.2.0
+  - pytest-cov>=2.12.0
+  - pytest-xdist>=2.3.0
+  - hypothesis>=6.14.0
+  
+  # ============================================================================
+  # Documentation (Optional)
+  # ============================================================================
+  
+  - sphinx>=4.0.0
+  - sphinx_rtd_theme>=0.5.0
+  - sphinx-autodoc-typehints>=1.12.0
+  - myst-parser>=0.15.0
+  - nbsphinx>=0.8.0
+  
+  # ============================================================================
+  # Utilities
+  # ============================================================================
+  
+  - tqdm>=4.60.0
+  - joblib>=1.0.0
+  - pyyaml>=5.4.0
+  - click>=8.0.0
+  
+  # ============================================================================
+  # Optional: Data Processing Enhancements
+  # ============================================================================
+  
+  - openpyxl>=3.0.0          # Excel file support
+  - xlrd>=2.0.0              # Excel file reading
+  - tables>=3.6.0            # HDF5 support for pandas
+  - statsmodels>=0.12.0      # Statistical models
+  
+  # ============================================================================
+  # Optional: Machine Learning (for future research directions)
+  # ============================================================================
+  
+  - scikit-learn>=0.24.0,<2.0.0
+  - xgboost>=1.4.0
+  
+  # ============================================================================
+  # Optional: Advanced Visualization
+  # ============================================================================
+  
+  - plotly>=5.0.0
+  - bokeh>=2.3.0
+  - graphviz>=2.47.0
+  - python-graphviz>=0.16.0
+  
+  # ============================================================================
+  # Optional: Parallel Computing
+  # ============================================================================
+  
+  - dask>=2021.6.0
+  - distributed>=2021.6.0
+  
+  # ============================================================================
+  # pip packages
+  # ============================================================================
+  
+  - pip>=21.0
+  - pip:
+    # Packages only available via pip
+    # Currently empty - all main packages available in conda
+    
+# ============================================================================
+# Platform-specific notes:
+# ============================================================================
+# 
+# Windows users: All packages should work on Windows
+# macOS users: All packages should work on macOS (both Intel and Apple Silicon)
+# Linux users: All packages should work on Linux
+#
+# Apple Silicon (M1/M2) notes:
+# - Use miniforge instead of miniconda for better ARM support
+# - All packages listed here have ARM64 builds available
+#
+# ============================================================================
+# Installation instructions:
+# ============================================================================
+#
+# 1. Install conda/mamba (if not already installed):
+#    - miniconda: https://docs.conda.io/en/latest/miniconda.html
+#    - miniforge (recommended for Apple Silicon): https://github.com/conda-forge/miniforge
+#    - mamba (faster): https://mamba.readthedocs.io/
+#
+# 2. Create environment from this file:
+#    conda env create -f environment.yaml
+#
+# 3. Activate the environment:
+#    conda activate rst-supply-chain
+#
+# 4. Verify installation:
+#    python -c "import numpy, pandas, scipy, networkx, matplotlib, seaborn; print('All imports successful!')"
+#
+# 5. To update the environment:
+#    conda env update -f environment.yaml --prune
+#
+# 6. To export your current environment:
+#    conda env export > environment-frozen.yaml
+#
+# 7. To remove the environment:
+#    conda deactivate
+#    conda env remove -n rst-supply-chain
+#
+# ============================================================================
+# Minimal environment (if you have space/bandwidth constraints):
+# ============================================================================
+#
+# If you only need core functionality, create environment-minimal.yaml with:
+#   - python=3.9
+#   - numpy>=1.20.0
+#   - pandas>=1.3.0
+#   - scipy>=1.7.0
+#   - networkx>=2.6.0
+#   - matplotlib>=3.4.0
+#   - seaborn>=0.11.0
+#
+# ============================================================================
