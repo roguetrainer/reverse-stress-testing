@@ -1,19 +1,23 @@
-🔗 Reverse Stress Testing for Supply Chain Resilience
+⏮️ Reverse 🏋🏽‍♀️ Stress Testing for 🚚 Supply ⛓️ Chain 💪 Resilience
 
-I'm excited to share a complete Python implementation of a groundbreaking methodology from a recent paper (arXiv:2511.07289) that's changing how we think about supply chain risk management.
+A quick & dirty Python implementation of a groundbreaking methodology from a recent paper (arXiv:2511.07289) that's changing how we think about supply chain risk management.
 
 🤔 The Problem with Traditional Stress Testing:
 
-Most organizations ask: "What happens if X disrupts our supply chain?"
+Most organizations ask: "What happens if X disrupts our supply chain?" 💣🌉
 
-But this approach has a fatal flaw: you can only test scenarios you can imagine. What about the threats you haven't thought of?
+🌪️ But this approach has a fatal flaw: 𝘺𝘰𝘶 𝘤𝘢𝘯 𝘰𝘯𝘭𝘺 𝘵𝘦𝘴𝘵 𝘴𝘤𝘦𝘯𝘢𝘳𝘪𝘰𝘴 𝘺𝘰𝘶 𝘤𝘢𝘯 𝘪𝘮𝘢𝘨𝘪𝘯𝘦. What about the threats you haven't thought of?
 
-💡 Enter Reverse Stress Testing:
+💡 Enter REVERSE STRESS TESTING:
 
-Instead of starting with a threat scenario, RST works backwards:
-• Start: "What if we lose 20% of copper wire imports?"
-• Find: The most probable causes across the entire supply chain
-• Result: Threat-agnostic vulnerability analysis with probabilities
+🤔 Instead of starting with a threat scenario, RST works backwards:
+❓ Start: "What if we lose 20% of copper wire imports?"
+🔎 Find: The most probable causes across the entire supply chain
+🎲 Result: Threat-agnostic vulnerability analysis with probabilities
+
+📖 Paper Reference: 🆕
+Smith et al. (2025), "Reverse Stress Testing for Supply Chain Resilience", arXiv:2511.07289
+Smith, Gaiewski, Dulin, Williams, Keisler, Jin, & Linkov
 
 🎯 Real-World Example (from the paper):
 
@@ -70,7 +74,7 @@ Based on financial sector reverse stress testing, adapted for physical supply ch
 
 🚀 Ready to Use:
 
-The full implementation includes:
+The implementation includes:
 • Core algorithm (780 lines)
 • Data processing utilities (450 lines)
 • Visualization tools (380 lines)
@@ -80,16 +84,10 @@ The full implementation includes:
 
 Perfect for risk managers, supply chain professionals, researchers, and anyone interested in resilience analysis.
 
-📖 Paper Reference:
-Smith et al. (2025), "Reverse Stress Testing for Supply Chain Resilience", arXiv:2511.07289
-
 🔗 Implementation: https://github.com/roguetrainer/reverse-stress-testing
-Open source, fully documented, ready to deploy
 
 ---
 
 #SupplyChain #RiskManagement #Resilience #DataScience #Python #MachineLearning #SupplyChainManagement #CriticalInfrastructure #NationalSecurity #Research #Analytics #BusinessIntelligence #OperationsResearch
-
-What's your biggest supply chain vulnerability concern? How are you currently identifying risks that you haven't thought of yet?
 
 Let's discuss in the comments! 👇
